@@ -463,9 +463,7 @@ char *yytext;
 #line 2 "flextest3.l"
 # include <stdio.h> 
 # include "hashtest.h"
-
-uint32_t sum = 0;
-#line 469 "lex.yy.c"
+#line 467 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -647,10 +645,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 13 "flextest3.l"
+#line 11 "flextest3.l"
 
 
-#line 654 "lex.yy.c"
+#line 652 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -735,45 +733,45 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 15 "flextest3.l"
+#line 13 "flextest3.l"
 { hasher(yytext); } 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 16 "flextest3.l"
+#line 14 "flextest3.l"
 { hasher(yytext); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 17 "flextest3.l"
+#line 15 "flextest3.l"
 { hasher(yytext); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 18 "flextest3.l"
+#line 16 "flextest3.l"
 {}
 	YY_BREAK
 case 5:
 /* rule 5 can match eol */
 YY_RULE_SETUP
-#line 19 "flextest3.l"
+#line 17 "flextest3.l"
 {}
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 20 "flextest3.l"
+#line 18 "flextest3.l"
 { return -1; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 21 "flextest3.l"
+#line 19 "flextest3.l"
 {}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 23 "flextest3.l"
+#line 21 "flextest3.l"
 ECHO;
 	YY_BREAK
-#line 777 "lex.yy.c"
+#line 775 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -1768,7 +1766,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 23 "flextest3.l"
+#line 21 "flextest3.l"
 
 
 

@@ -22,9 +22,10 @@ uint32_t hasher(const char *key)
     memcpy(realKey, key, keyL);
 
     AES128_ECB_encrypt((uint8_t *) saltarray, (uint8_t *) realKey, (uint8_t *) output);
-    sum ^= output[0] ^ output[1] ^ output[3];
+    sum ^= output[0] ^ output[1] ^ output[2] ^ output[3];
 
-    printf("hash: %d ", sum);
+    printf(" hash: %u \n", sum);
+    printf(" output0: %u\n output1: %u\n output2: %u\n output3: %u\n", output[0], output[1], output[2], output[3]);
 
     free(realKey);
 
