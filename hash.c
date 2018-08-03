@@ -28,4 +28,35 @@ uint32_t hash(hashTable *h, const char *key)
     return sum;
 }
 
+hashTable *newHT(int32_t len, uint32_t *saltHt){
+    hashTable *myHt = (hashTable *) malloc(sizeof(hashTable));
+    myHt->l = len;
+    for(int i = 0; i < 4; i++){
+        myHt->salt[i] = saltHt[i];
+    }
+    myHt->h = (listNode **) malloc(len * sizeof(listNode *));
+    for(int i = 0; i < len; i++){
+        h[i] = NULL;
+    }
+    return myHt;
+}
+
+void delHT(hashTable * aHt){
+    free(aHt);
+}
+
+listNode *findHT(hashTable *, const char *){
+
+}
+
+void insertHT(hashTable * aHt, const char * oldspeak, const char * newspeak){
+    uint32_t index = hash(aHt, oldspeak);
+    
+}
+
+void printHT(const hashTable *){
+
+}
+
+
 // And so forth
