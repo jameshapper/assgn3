@@ -55,7 +55,7 @@ static inline uint32_t countBF(bloomF *b)
 {
    int len = b->l;
 
-   int bits = len * 32;
+   int bits = len * 8;
 
    return bits;
 }
