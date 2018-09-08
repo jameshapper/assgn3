@@ -9,4 +9,10 @@
 # include "aes.h"
 # include "hashtest.h"
 
+void main(){
+
+    printf("hashval: %u \n", yytext);
+
+}
+
 

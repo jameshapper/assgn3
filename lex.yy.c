@@ -1773,10 +1773,6 @@ void yyfree (void * ptr )
 int main(void) { 
     yylex();
     
-    printf("hash1: %u \n", hasher(yytext));
-
-    yylex();
-    
-    printf("hash2: %u \n", hasher(yytext));
+    // printf("hash1: %u \n", hasher(yytext));
 }
 
