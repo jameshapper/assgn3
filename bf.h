@@ -6,6 +6,7 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <string.h>
 
 typedef struct bloomF {
     uint8_t *v; // Vector
@@ -13,64 +14,24 @@ typedef struct bloomF {
     uint32_t s[4]; // Salt
 } bloomF;
 
-// Each function has its own hash function, determined by the salt. 
+uint32_t hashBF(bloomF *, char *);                          // Each function has its own hash function, determined by the salt. 
 
-uint32_t hashBF(bloomF *, char *);
+static inline bloomF *newBF(uint32_t l, uint32_t b[]);      // Create a new Bloom Filter of a given length and hash function.
 
-// Create a new Bloom Filter of a given length and hash function.
+static inline void delBF(bloomF *v);                        // Delete a Bloom filter   
 
-static inline bloomF *newBF(uint32_t l, uint32_t b[])
-{
-    // Code
-}
+static inline uint32_t valBF(bloomF *x, uint32_t k);        // Return the value of position k in the Bloom filter 
 
-// Delete a Bloom filter   
+static inline uint32_t lenBF(bloomF *x);                    // Returns length of the Bloom filter 
 
-static inline void delBF(bloomF *v)
-{
-    // Code
-}
+static inline uint32_t countBF(bloomF *b);                  // Count bits in the Bloom filter
 
-// Return the value of position k in the Bloom filter 
+static inline void setBF(bloomF *x, char * key);            // Set an entry in the Bloom filter 
 
-static inline uint32_t valBF(bloomF *x, uint32_t k)
-{
-    // Code
-}
+static inline void clrBF(bloomF *x, char *key);             // Clear an entry in the Bloom filter 
 
-static inline uint32_t lenBF(bloomF *x) { return x->l; } 
+static inline uint32_t memBF(bloomF *x, char *key);         // Check membership in the Bloom filter 
 
-// Count bits in the Bloom filter
-
-static inline uint32_t countBF(bloomF *b)
-{
-    // Code
-}
-
-// Set an entry in the Bloom filter 
-
-static inline void setBF(bloomF *x, char * key)
-{
-    // Code
-}
-
-// Clear an entry in the Bloom filter 
-
-static inline void clrBF(bloomF *x, char *key)
-{
-    // Code
-}
-
-// Check membership in the Bloom filter 
-
-static inline uint32_t memBF(bloomF *x, char *key)
-{
-    // Code
-}
-
-static inline void printBF(bloomF *x)
-{
-    // Code
-}
+static inline void printBF(bloomF *x);                      // prints Bloom filter
 
 # endif

@@ -22,4 +22,6 @@ PUNC [~‘!@#$%^&*()_+-={}|\\\[\]:;\"\’<>,./?]
 
 int main(void) { 
     yylex();
+    
+    // printf("hash1: %u \n", hasher(yytext));
 }

@@ -1772,5 +1772,7 @@ void yyfree (void * ptr )
 
 int main(void) { 
     yylex();
+    
+    // printf("hash1: %u \n", hasher(yytext));
 }
 
